@@ -1,8 +1,27 @@
 aid: embark
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/embark.png
 name: Embark
-description: Embark is a company surfaced as a portfolio company of dcvc, softbank-vision-fund and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Embark Veterinary is a dog genetics company that sells at-home canine DNA
+  testing kits for breed identification, health condition and genetic-risk
+  screening, trait analysis, and relative matching, alongside supplements and
+  breeder/veterinary testing programs. Backed by SoftBank Vision Fund 2, the
+  company operates a direct-to-consumer storefront, a help center, and a
+  resources/blog library, but does not publish a public developer API,
+  developer portal, or API documentation. This profile was surfaced from
+  VC-portfolio data; no machine-readable API surface (OpenAPI, AsyncAPI,
+  GraphQL, MCP) was found during enrichment.
 url: https://raw.githubusercontent.com/api-evangelist/embark/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +29,49 @@ x-backed-by:
 - dcvc
 - softbank-vision-fund
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-public-api-surface
+x-notes: >-
+  VC-portfolio conflation risk: the SoftBank Vision Fund 2 backing maps to
+  Embark Veterinary (embarkvet.com, live, dog DNA testing), while the DCVC
+  (Data Collective) backing most likely maps to the unrelated Embark Trucks
+  (autonomous trucking, since wound down / absorbed by Applied Intuition;
+  embarktrucks.com returns HTTP 403). Identity here reflects Embark
+  Veterinary, the live company. Neither publishes a public developer API.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Veterinary
+- Pets
+- Genetics
+- DNA Testing
+- Animal Health
+- Consumer Health
+- Diagnostics
 apis: []
+common:
+- type: Website
+  url: https://embarkvet.com
+- type: Support
+  url: https://help.embarkvet.com
+- type: HelpCenter
+  url: https://help.embarkvet.com
+- type: Blog
+  url: https://embarkvet.com/resources/
+- type: Pricing
+  url: https://shop.embarkvet.com/pages/shop-all
+- type: PrivacyPolicy
+  url: https://embarkvet.com/privacy-policy/
+- type: TermsOfService
+  url: https://embarkvet.com/tos/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
